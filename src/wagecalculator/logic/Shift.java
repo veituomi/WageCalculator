@@ -15,15 +15,15 @@ public class Shift {
      */
     public Shift(String start, String end) {
         interval = new TimeInterval(start, end);
-        wage = 3.75;
-        nightWage = 1.15;
+        wage = 3.75 / 60;
+        nightWage = 1.15 / 60;
     }
     
     /**
      * @return Returns basic wage without compensations in dollars
      */
     public double getCash() {
-        return (double)interval.getMinutes() / 60 * wage;
+        return (double)interval.getMinutes() * wage;
     }
     
     /**
@@ -31,17 +31,17 @@ public class Shift {
      */
     public double getOvertimeCompensation() {
         double minutes = interval.getMinutes();
-        return wage / 60 * (
-                0.25 * Math.max(0, minutes - 480) +
-                0.25 * Math.max(0, minutes - 600) +
-                0.5 * Math.max(0, minutes - 720));
+        return wage * (
+                0.25 * Math.max(0, minutes - 480) + // After 8 hours +25%
+                0.25 * Math.max(0, minutes - 600) + // After 10 hours +25%
+                0.5 * Math.max(0, minutes - 720)); // After 12 hours +50%
     }
     
     /**
      * @return Returns night compensation in dollars
      */
     public double getNightCompensation() {
-        return (double)interval.getNightMinutes() / 60 * nightWage;
+        return (double)interval.getNightMinutes() * nightWage;
     }
     
     /**
