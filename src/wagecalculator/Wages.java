@@ -26,6 +26,7 @@ public class Wages {
         String line;
         while ((line = reader.nextLine()) != null) {
             String[] csvData = line.split(",");
+            if (csvData.length < 5) break;
             int id = Integer.parseInt(csvData[1]);
             addShift(id, csvData[0], new Shift(csvData[3], csvData[4]));
         }
@@ -45,7 +46,7 @@ public class Wages {
     public void print(PrintStream stream) {
         for (Integer id : employees.keySet()) {
             Employee e = employees.get(id);
-            System.out.println(id + ", " + e);
+            stream.println(id + ", " + e);
         }
     }
 }
