@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="dhcp-asv-119" name="wagecalculator.logic.ShiftTest" skipped="0" tests="4" time="0.093" timestamp="2016-10-24T17:25:45">
+<testsuite errors="0" failures="0" hostname="dhcp-asv-119" name="wagecalculator.logic.EmployeeTest" skipped="0" tests="1" time="0.082" timestamp="2016-10-24T17:25:44">
   <properties>
     <property name="netbeans.autoupdate.country" value="FI" />
     <property name="nb.wait.for.caches" value="true" />
@@ -38,7 +38,7 @@
     <property name="user.name" value="Veini Tuominen" />
     <property name="copylibs.rebase" value="true" />
     <property name="libs.swing-layout.maven-pom" value="" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner wagecalculator.logic.ShiftTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Veini Tuominen\Documents\Java\WageCalculator\build\test\results\TEST-wagecalculator.logic.ShiftTest.xml crashfile=C:\Users\Veini Tuominen\Documents\Java\WageCalculator\build\junitvmwatcher9146319669832005281.properties propsfile=C:\Users\Veini Tuominen\Documents\Java\WageCalculator\build\junit3126129730971897726.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner wagecalculator.logic.EmployeeTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Veini Tuominen\Documents\Java\WageCalculator\build\test\results\TEST-wagecalculator.logic.EmployeeTest.xml crashfile=C:\Users\Veini Tuominen\Documents\Java\WageCalculator\build\junitvmwatcher3258949467004477823.properties propsfile=C:\Users\Veini Tuominen\Documents\Java\WageCalculator\build\junit7064797217828615888.properties" />
     <property name="build.classes.dir" value="build/classes" />
     <property name="netbeans.accept_license_class" value="org.netbeans.license.AcceptLicense" />
     <property name="build.sysclasspath" value="ignore" />
@@ -306,10 +306,7 @@
     <property name="platform.active" value="default_platform" />
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit" />
   </properties>
-  <testcase classname="wagecalculator.logic.ShiftTest" name="testGetOvertimeCompensation" time="0.005" />
-  <testcase classname="wagecalculator.logic.ShiftTest" name="testGetCash" time="0.001" />
-  <testcase classname="wagecalculator.logic.ShiftTest" name="testGetNightCompensation" time="0.001" />
-  <testcase classname="wagecalculator.logic.ShiftTest" name="testGetTotalCash" time="0.001" />
+  <testcase classname="wagecalculator.logic.EmployeeTest" name="testAddShift" time="0.008" />
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

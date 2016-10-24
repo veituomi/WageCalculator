@@ -52,7 +52,14 @@ public class ShiftTest {
 
     @Test
     public void testGetTotalCash() {
-        fail("The test case is a prototype.");
+        double[] expected = {
+            34.3, 4.325, 64.425, 29.4, 111.175, 95.025, 43.8875
+        };
+        
+        for (int i = 0; i < intervals.length; ++i) {
+            Shift shift = new Shift(intervals[i][0], intervals[i][1]);
+            assertEquals(expected[i], shift.getTotalCash(), 0.01);
+        }
     }
     
 }

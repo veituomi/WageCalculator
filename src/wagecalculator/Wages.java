@@ -27,11 +27,15 @@ public class Wages {
         while ((line = reader.nextLine()) != null) {
             String[] csvData = line.split(",");
             int id = Integer.parseInt(csvData[1]);
-            if (!employees.containsKey(id)) {
-                employees.put(id, new Employee(csvData[0]));
-            }
-            employees.get(id).addShift(new Shift(csvData[3], csvData[4]));
+            addShift(id, csvData[0], new Shift(csvData[3], csvData[4]));
         }
+    }
+    
+    private void addShift(int id, String name, Shift shift) {
+        if (!employees.containsKey(id)) {
+            employees.put(id, new Employee(name));
+        }
+        employees.get(id).addShift(shift);
     }
     
     /**
