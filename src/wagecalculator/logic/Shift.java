@@ -31,7 +31,7 @@ public class Shift {
      */
     public double getOvertimeCompensation() {
         double minutes = interval.getMinutes();
-        return wage * (
+        return wage / 60 * (
                 0.25 * Math.max(0, minutes - 480) +
                 0.25 * Math.max(0, minutes - 600) +
                 0.5 * Math.max(0, minutes - 720));

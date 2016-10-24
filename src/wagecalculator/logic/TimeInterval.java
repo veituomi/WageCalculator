@@ -30,7 +30,7 @@ public class TimeInterval {
      * @return Returns minutes not between 06:00 and 18:00
      */
     public int getNightMinutes() {
-        return from.getTotalMinutes() - this.getDayMinutes();
+        return this.getMinutes() - this.getDayMinutes();
     }
     
     /**
